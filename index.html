@@ -125,24 +125,25 @@ nav ul li a:focus {
   }
 }
 
- #home {
-      position: relative;
-      background-image: url("newbg.jpg");
-      background-repeat: no-repeat;
-      background-size: cover; /* cover for full bg */
-      background-position: center center;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      z-index: 1;
-      overflow: hidden;
-      max-width: 100vw;
-      box-sizing: border-box;
-      padding: 0 20px; /* horizontal padding for small devices */
-    }
-    
+#home {
+  position: relative;
+  background-image: url("newbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;        /* Ensures it covers the whole area */
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  width: 100vw;                  /* Ensure full width */
+  max-width: 100%;               /* Prevent overflow */
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
 
 #home .overlay {
   position: absolute;
