@@ -173,43 +173,56 @@ nav ul li a.active::after {
     transform: translateX(-50%);
   }
 }
-
 #home {
   position: relative;
-  background-size: cover;
-  background-position: center;
   height: 100vh;
   width: 100%;
-  color: #15262b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  font-weight: 600;
-  max-width: 100vw;
-  box-sizing: border-box;
-  padding: 0 20px;
-  animation: fadeBackground 12s infinite; /* Changed to match number of images */
+  /* other styles remain the same */
 }
 
-@keyframes fadeBackground {
-  0%, 20% {
-    background-image: url("Gemini_Generated_Image_qvkaiqqvkaiqqvka.png");
-  }
-  25%, 45% {
-    background-image: url("AI_Generated_Image_2025-06-16.png"); /* Add your second image */
-  }
-  50%, 70% {
-    background-image: url("c616a7ef-803e-43d3-9052-a5134d74a4ea.jpg"); /* Add your third image */
-  }
-  75%, 95% {
-    background-image: url("81056634-d850-40ba-9d6e-db5f14abb1e4.jpg"); /* Add your fourth image */
-  }
-  100% {
-    background-image: url("Gemini_Generated_Image_qvkaiqqvkaiqqvka.png");
-  }
+#home .bg-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+
+#home .bg-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: bgFade 16s infinite;
+}
+
+#home .bg-slideshow .slide:nth-child(1) {
+  background-image: url("Gemini_Generated_Image_qvkaiqqvkaiqqvka.png");
+  animation-delay: 0s;
+}
+#home .bg-slideshow .slide:nth-child(2) {
+  background-image: url("AI_Generated_Image_2025-06-16.png");
+  animation-delay: 4s;
+}
+#home .bg-slideshow .slide:nth-child(3) {
+  background-image: url("c616a7ef-803e-43d3-9052-a5134d74a4ea.jpg");
+  animation-delay: 8s;
+}
+#home .bg-slideshow .slide:nth-child(4) {
+  background-image: url("81056634-d850-40ba-9d6e-db5f14abb1e4.jpg");
+  animation-delay: 12s;
+}
+
+@keyframes bgFade {
+  0% { opacity: 0; transform: scale(1.1); }
+  10% { opacity: 1; transform: scale(1); }
+  20% { opacity: 1; transform: scale(1); }
+  25% { opacity: 0; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.1); }
+}
+
 #home .overlay {
   position: absolute;
   top: 0;
@@ -739,8 +752,17 @@ footer {
 </header>
 
   <div id="home">
+  <div class="bg-slideshow">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
   <div class="overlay"></div>
   <div class="home-content">
+    <!-- Your content here -->
+  </div>
+</div>
    
     
   </div>
