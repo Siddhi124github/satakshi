@@ -46,11 +46,15 @@ nav {
 
 nav img {
   height: 70px;
-  filter:none;
-  width: 100px;
-  border-radius:10%;
-
+  width: auto; /* Keep aspect ratio */
+  border-radius: 12%; /* More organic */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft drop shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effects */
+  background-color: #fff; /* Optional: subtle contrast if image has transparency */
+  padding: 5px; /* Space inside background */
+  cursor: pointer;
 }
+
 
 nav ul {
   list-style: none;
