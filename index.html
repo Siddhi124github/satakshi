@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +42,14 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+nav img {
+  height: 70px;
+  filter:none;
+  width: 70px;
+  border-radius:40%;
+
 }
 
 nav ul {
@@ -110,30 +119,35 @@ nav ul li a:focus {
   }
 }
 
+/* Home Section */
 #home {
   position: relative;
+  background-image: url("Shatakshi.jpg");
+  background-position: center;
+  background-size: cover;
   height: 100vh;
-  width: 100%;
-  overflow: hidden;
+  width:100%;
+  color: #15262b;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+  font-weight: 600;
+    max-width: 100vw;
+      box-sizing: border-box;
+      padding: 0 20px; 
 }
 
-.hero-img {
+#home .overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover; /* Use 'contain' if you want to show the full image with potential gaps */
-  object-position: top center;
-  z-index: -1;
-  image-rendering: auto; /* Optional: improve quality on some browsers */
+ /* Stronger dark overlay */
+  z-index: 1;
 }
-
-
 
 .home-content {
   position: relative;
@@ -639,6 +653,7 @@ footer {
   <header>
   <nav>
     <a href="#home">
+      <img src="Shatakshi (1).jpg" alt="Company Logo">
     </a>
     
     <!-- Hamburger Icon -->
@@ -652,13 +667,6 @@ footer {
     </ul>
   </nav>
 </header>
-<section id="home">
-  <img src="Screenshot 2025-06-16 131038.png" alt="Hero Background" class="hero-img" />
-  <div class="hero-content">
-    <!-- Your centered content here -->
-    <h1>Welcome to 360° Impact</h1>
-  </div>
-</section>
 
   <div id="home">
   <div class="overlay"></div>
