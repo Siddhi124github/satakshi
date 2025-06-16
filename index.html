@@ -114,10 +114,12 @@ nav ul li a:focus {
 #home {
   position: relative;
   background-image: url("Screenshot 2025-06-16 131038.png");
-  background-position: center;
-  background-size: contain;
+  background-repeat: no-repeat; /* Prevents multiple images */
+  background-size: cover;       /* Makes it fill the container without keeping original aspect ratio */
+  background-position: center;  /* Centers the image */
+  
   height: 100vh;
-  width:100%;
+  width: 100%;
   color: #15262b;
   display: flex;
   align-items: center;
@@ -125,10 +127,11 @@ nav ul li a:focus {
   text-align: center;
   overflow: hidden;
   font-weight: 600;
-    max-width: 100vw;
-      box-sizing: border-box;
-      padding: 0 20px; 
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
+
 
 
 
